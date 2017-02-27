@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node_modules/babel/bin/babel.js src --source-maps --out-dir dist",
-    "start": "node_modules/nodemon/bin/nodemon.js -- node_modules/babel/bin/babel-node.js src/server.js"
+    "test": "mocha --require babel-polyfill --require chai --compilers js:babel-register tests --recursive",
+    "build": "babel src --source-maps --out-dir dist",
+    "start": "nodemon --exec babel-node src/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,7 +14,13 @@
     "express": "4.13.3"
   },
   "devDependencies": {
-    "babel": "5.8.29",
+    "babel": "^5.8.29",
+    "babel-cli": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
     "nodemon": "1.8.0"
   }
 }
