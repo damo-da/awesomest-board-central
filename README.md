@@ -4,6 +4,9 @@ Boilerplate for ES6 + Express.js + Mocha + Chai with Babel Edit
 ### Quick start
 
 ```bash
+# pre-setup
+npm install -g nodemon babel-cli mocha # may need "sudo"
+
 # setup
 git clone https://github.com/500tech/nodejs-express-es6.git   
 cd nodejs-express-es6  
